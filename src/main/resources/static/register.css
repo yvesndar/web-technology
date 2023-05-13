@@ -1,0 +1,182 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: rgb(0, 7, 205);
+  background: linear-gradient(100deg, rgb(0, 7, 205) 0%, rgb(0, 16, 156) 61%, rgb(0, 8, 75) 100%);
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #000681;
+  max-height: 540px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 7px 7px 10px 3px rgba(0, 3, 55, 0.2823529412);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+/*checkbox to switch from sign up to login*/
+#chk {
+  display: none;
+}
+
+/*Login*/
+.login {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.login label {
+  margin: 25% 0 5%;
+}
+
+label {
+  color: #fff;
+  font-size: 2rem;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  background: #e0dede;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+/*Register*/
+.register {
+  background: #eee;
+  border-radius: 60%/5%;
+  transform: translateY(5%);
+  transition: 0.8s ease-in-out;
+}
+
+.register label {
+  color: #000681;
+  transform: scale(0.6);
+}
+
+#chk:checked ~ .register {
+  transform: translateY(-60%);
+}
+
+#chk:checked ~ .register label {
+  transform: scale(1);
+  margin: 10% 0 5%;
+}
+
+#chk:checked ~ .login label {
+  transform: scale(0.6);
+  margin: 5% 0 5%;
+}
+
+/*Button*/
+.form button {
+  width: 85%;
+  height: 40px;
+  margin: 12px auto 10%;
+  color: #fff;
+  background: #00055b;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.form button:hover {
+  background-color: #000ac5;
+}
+
+.wave-container {
+  z-index: -6;
+  position: fixed;
+  bottom: 0;
+  height: 20%;
+}
+
+.wave-container .waves {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 15s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 20s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 25s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+.change {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+select,
+option {
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 480;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
