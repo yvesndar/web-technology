@@ -68,6 +68,7 @@ public class UserService {
     public User logUser(User user) {
     	System.out.println("hello");
     	Optional<User> byUsername = userRepository.findByUsername(user.getUsername());
+    	System.out.println(byUsername.get().getLastname()+" "+byUsername.get().getLastname());
     	if(byUsername.isPresent()) {
     		User dbUser = byUsername.get();
     		if(bcrypt.matches(user.getPassword(), dbUser.getPassword())) {

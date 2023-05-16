@@ -112,7 +112,6 @@ public class UserController {
 
 	@GetMapping("user/all")
 	public String getUsers() {
-		System.out.println("hello");
 		return "hello";
 	}
 
